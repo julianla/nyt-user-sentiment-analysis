@@ -64,4 +64,17 @@ Given that the program connects to a server, this process might take some time. 
 
 The index of the sentence in the comment, the sentiment as a digit (0,1,2,3,4) and the sentiment as a string (in that order) are stored to the document `StanfordNLP_{title of the article or date}.txt`. The share of very negative, negative, neutral, positive and very positive sentences to the file `{'NLP_results' or 'title of the article'}.txt`. Both documents are stored in the folder `Stanford_NLP_data`.
 
+## Examples
+
+Using the created NLP_results.txt file that contains the sentiment shares of the users by date, one can track the sentiment of the user comments over time and plot them in a graph such as this:
+
+[Sentiment Tracker](Sentiment Tracker.png)
+
+I will update this plot in the next couple of weeks to show more than three days.
+
+To create a similar plot, download the file `visualizeNLP.py` and run in the command line:
+
+`python visualizeNLP.py --args 2017-02-18 2017-02-19 2017-02-20`
+
+
 Tested with Python 2.7.
